@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Arial;
+    font-weight: bold;
+}
+
+body {
+    background-image: url('https://onwardigo.files.wordpress.com/2016/05/millionaire01.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.wwtbam_container {
+    height:100%;
+    width: 100%;
+}
+
+.wwtbam_top {
+    display: flex;
+}
+
+.wwtbam_logo {
+    flex: 3;
+    margin: 0 auto;
+}
+
+#letsplay, #back {
+    color: white;
+    background-color: purple;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#walkaway {
+    color: white;
+    background-color: black;
+    border: 3px solid cyan;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}

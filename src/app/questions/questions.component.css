@@ -1,0 +1,13 @@
+.question {
+    background-color: black;
+    border: 3px solid blue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+    word-break: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

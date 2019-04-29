@@ -1,0 +1,15 @@
+.wwtbam_image {
+    margin-bottom: 20px;
+}
+
+.wwtbam_image img {
+    width: 400px;
+}
+
+.wwtbam_title_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

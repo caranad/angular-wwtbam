@@ -1,0 +1,30 @@
+.wwtbam_prize_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wwtbam_prize {
+    padding: 10px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.wwtbam_prize_contents {
+    width: 90%;
+}
+
+.wwtbam_money_value {
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    color: orange;
+    font-size: 64px;
+}

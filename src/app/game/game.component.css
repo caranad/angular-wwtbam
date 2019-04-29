@@ -1,0 +1,36 @@
+:host {
+    width: 100%;
+}
+
+.choice_row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.lifelines {
+    flex: 1;
+    text-align: center;
+}
+
+.question_choice {
+    width: 98%;
+    position: absolute;
+    bottom: 0;
+}
+
+#thousand_milestone, #thirtytwo_milestone {
+    display: none;
+    color: orange;
+    background-color: navy;
+}
+
+.wwtbam_cash_won {
+    display: none;
+    color: yellow;
+    background-color:navy;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+    margin: 10 auto;
+}

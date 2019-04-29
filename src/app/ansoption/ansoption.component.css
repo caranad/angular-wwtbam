@@ -1,0 +1,16 @@
+:host {
+    flex: 1;
+    background-color: black;
+    border: 3px solid blue;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+:host:hover {
+    background-color: gray;
+}
+
+.choice_a b {
+    color: orange;
+}
