@@ -1,27 +1,5 @@
-# Wwtbam
+So I was inspired to make a "Who Wants To Be A Millionaire" game that acted like one of those PowerPoint slide versions. I used Angular and Node.js to generate this project. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+When playing the game, you click once on an answer option to select as your final answer, and then twice to see the correct answer, and on the third time you would advance to the next question. I will be continually providing fixes to the program and general clean-ups of code architecture so that it functions well.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Questions are read from a Node.js server in JSON format.
