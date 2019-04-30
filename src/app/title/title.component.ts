@@ -13,8 +13,6 @@ export class TitleComponent implements OnInit {
       audio.src = "../../assets/sound/wwtbam_main.mp3";
       audio.load();
       audio.play();
-
-      console.log(audio.play());
     }, 2000);
    }
 

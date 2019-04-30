@@ -40,10 +40,10 @@ export class AnsoptionComponent implements OnInit {
     if (this.choice != " ") {
       if (this.numTaps == 0) {
         this.numTaps = 2;
+
+        this.getNativeElement().nativeElement.style.pointerEvents = "none";
   
         this.playLetsPlaySound(this.app.getCurrentQuestion());
-        this.app.blockQuestion();
-        this.app.blockLifelines();
 
         setTimeout(function() {   
           x.app.getNextQuestion();
@@ -61,6 +61,12 @@ export class AnsoptionComponent implements OnInit {
 
         this.getNativeElement().nativeElement.style.backgroundColor = "orange";
         this.getNativeElement().nativeElement.querySelector("b").style.color = "black";
+
+        // Block any other choice from being pickable except the one you chose
+        this.app.blockQuestions();
+
+        // Block lifelines 
+        this.app.blockLifelines();
 
         if (this.app.isDoubleDip()) {
           // Play double dip final answer sound

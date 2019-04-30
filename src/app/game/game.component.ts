@@ -74,8 +74,14 @@ export class GameComponent {
     return this.progress;
   }
 
-  blockQuestion() {
-    this.element.nativeElement.querySelector(".question_choice").style.pointerEvents = "none";
+  blockQuestions() {
+    var answers = this.element.nativeElement.querySelectorAll("app-ans");
+
+    for (var i = 0; i < answers.length; i++) {
+      if (answers[i].style.backgroundColor != "orange") {
+        answers[i].style.pointerEvents = "none";
+      }
+    }
   }
 
   blockLifelines() {
@@ -83,7 +89,11 @@ export class GameComponent {
   }
 
   unblockQuestion() {
-    this.element.nativeElement.querySelector(".question_choice").style.pointerEvents = "";
+    var answers = this.element.nativeElement.querySelectorAll("app-ans");
+
+    for (var i = 0; i < answers.length; i++) {
+      answers[i].style.pointerEvents = "";
+    }
   }
 
   unblockLifelines() {
