@@ -23,7 +23,6 @@ export class TitleComponent implements OnInit {
   }
 
   goToGame(num: number) {
-
     if (num < 1 && num > 25) {
       alert("Please pick a number that's between 1 and 25.");
     }
