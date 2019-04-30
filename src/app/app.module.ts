@@ -13,6 +13,7 @@ import { FiftylifelineComponent } from './fiftylifeline/fiftylifeline.component'
 import { PhonelifelineComponent } from './phonelifeline/phonelifeline.component';
 import { AudiencelifelineComponent } from './audiencelifeline/audiencelifeline.component';
 import { DdiplifelineComponent } from './ddiplifeline/ddiplifeline.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DdiplifelineComponent } from './ddiplifeline/ddiplifeline.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

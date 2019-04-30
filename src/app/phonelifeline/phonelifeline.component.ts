@@ -14,8 +14,6 @@ export class PhonelifelineComponent implements OnInit {
   }
 
   executeLifeline() {
-    alert("Phone a friend!");
-
     var x = this;
     this.element.nativeElement.style.display = "none";
 

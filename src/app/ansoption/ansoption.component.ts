@@ -42,9 +42,13 @@ export class AnsoptionComponent implements OnInit {
         this.numTaps = 2;
   
         this.playLetsPlaySound(this.app.getCurrentQuestion());
+        this.app.blockQuestion();
+        this.app.blockLifelines();
 
-        setTimeout(function() {
+        setTimeout(function() {   
           x.app.getNextQuestion();
+          x.app.unblockQuestion();
+          x.app.unblockLifelines();
         }, 4000)
 
         this.getNativeElement().nativeElement.querySelector("b").style[0] = "";
@@ -91,6 +95,8 @@ export class AnsoptionComponent implements OnInit {
 
             this.getNativeElement().nativeElement.style[0] = "";
             this.getNativeElement().nativeElement.style.backgroundColor = "";
+            this.getNativeElement().nativeElement.querySelector("b").style[0] = "";
+            this.getNativeElement().nativeElement.querySelector("b").style.color = "";
           }
           else {
             this.getNativeElement().nativeElement.style.backgroundColor = "orange";

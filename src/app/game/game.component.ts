@@ -1,12 +1,14 @@
 import { Component, ElementRef } from '@angular/core';
 import { MoneytreeComponent } from '../moneytree/moneytree.component';
+import { QuestionService } from '../services/question.service';
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css'],
-  providers: [MoneytreeComponent]
+  providers: [MoneytreeComponent, QuestionService]
 })
+
 export class GameComponent {
   public question: string;
   public answers: string[];
@@ -20,115 +22,20 @@ export class GameComponent {
   public audio: any;
   public winCash: string;
   public bgm: boolean;
+  public headers: any;
 
-  public qa: QuestionAnswers[];
+  public qa: any;
 
-  constructor(private el: ElementRef, private mtree: MoneytreeComponent) {
+  constructor(private el: ElementRef, private mtree: MoneytreeComponent, private qq: QuestionService) {
     this.letters = ["A", "B", "C", "D"];
     this.doubledip = false;
     
-    this.qa = [
-      {
-        "question": "What is 1+1?",
-        "answers": ["1", "2", "3", "4"],
-        "correct": 1,
-        "fifty": [0, 3]
-      },
-      {
-        "question": "What color is Pikachu?",
-        "answers": ["Yellow", "Green", "Blue", "Red"],
-        "correct": 0,
-        "fifty": [2, 3]
-      },
-      {
-        "question": "Most people in Europe belong to what religion?",
-        "answers": ["Judaism", "Islam", "Christianity", "Zorostrianism"],
-        "correct": 2,
-        "fifty": [2, 3]
-      },
-      {
-        "question": "What name is given to someone who is skeptical of the policies of the European Union?",
-        "answers": ["Eurosceptic", "Eurovision", "Eurostar", "Eurotrash"],
-        "correct": 0,
-        "fifty": [2, 3]
-      },
-      {
-        "question": "The capital of France is what?",
-        "answers": ["Bourges", "Nantes", "Strasbourg", "Paris"],
-        "correct": 3,
-        "fifty": [0, 1]
-      },
-      {
-        "question": "Which of these is the name of Han Solo's spaceship in Star Wars?",
-        "answers": ["Millenium Eagle", "Millenium Vulture", "Millenium Condor", "Millenium Falcon"],
-        "correct": 3,
-        "fifty": [0, 1]
-      },
-      {
-        "question": "The seat of the Church of England is in which city?",
-        "answers": ["London", "Salisbury", "Canterbury", "Oxford"],
-        "correct": 2,
-        "fifty": [1, 3]
-      },
-      {
-        "question": "Charles Ingram was associated with a Millionaire cheating scandal in which year?",
-        "answers": ["2000", "2001", "2002", "2003"],
-        "correct": 1,
-        "fifty": [2, 3]
-      },
-      {
-        "question": "Jove is another name for which Roman god?",
-        "answers": ["Neptune", "Jupiter", "Uranus", "Saturn"],
-        "correct": 1,
-        "fifty": [0, 2]
-      },
-      {
-        "question": "Which Hindu god looks like an elephant?",
-        "answers": ["Vishnu", "Hanuman", "Shiva", "Ganesh"],
-        "correct": 3,
-        "fifty": [0, 2]
-      },
-      {
-        "question": "In the 1984 film 'The Karate Kid', which of these is not the name of a Cobra Kai student?",
-        "answers": ["Dutch", "Billy", "Tommy", "Jimmy"],
-        "correct": 1,
-        "fifty": [2, 3]
-      },
-      {
-        "question": "Which of these World War II battles came first, chronologically?",
-        "answers": ["Battle of Okinawa", "D-Day", "Bombing of London", "Operation Barbarossa"],
-        "correct": 0,
-        "fifty": [2, 3]
-      },
-      {
-        "question": "The 1779 painting, 'The Blue Boy' by Thomas Gainsborough, depicts a boy holding what?",
-        "answers": ["Bird", "Hat", "Stick", "Sword"],
-        "correct": 1,
-        "fifty": [0, 3]
-      },
-      {
-        "question": "The Hussites were a religious sect that emerged in the 15th century, in which country?",
-        "answers": ["Poland", "Hungary", "Germany", "Czech Republic"],
-        "correct": 3,
-        "fifty": [0, 1]
-      },
-      {
-        "question": "Joseph and Marcel Lefebvre worked in the 20th century as what?",
-        "answers": ["U.S politicians", "Catholic archbishops", "Television producers", "Business owners"],
-        "correct": 1,
-        "fifty": [0, 2]
-      },
-    ]
-
     this.progress = 0;
     this.totalPrize = "0";
 
     this.element = el;
-    
-    this.question = this.qa[this.progress].question;
-    this.answers = this.qa[this.progress].answers;
-    this.correct = this.qa[this.progress].correct;
-    this.fifty = this.qa[this.progress].fifty;
+
+    this.readQuestionData();
 
     this.bgm = true;
 
@@ -136,6 +43,15 @@ export class GameComponent {
     this.audio.src = "../../assets/sound/100-1000.wav"; 
 
     this.playBGM(this.progress);
+  }
+
+  async readQuestionData() {
+    this.qa = await this.qq.getQuestions();
+
+    this.question = this.qa[this.progress].question;
+    this.answers = this.qa[this.progress].answers;
+    this.correct = this.qa[this.progress].correct;
+    this.fifty = this.qa[this.progress].fifty;
   }
 
   setDoubleDip(toggle:boolean) {
@@ -156,6 +72,22 @@ export class GameComponent {
 
   getNumQuestionsAnswered() {
     return this.progress;
+  }
+
+  blockQuestion() {
+    this.element.nativeElement.querySelector(".question_choice").style.pointerEvents = "none";
+  }
+
+  blockLifelines() {
+    this.element.nativeElement.querySelector(".lifelines").style.pointerEvents = "none";
+  }
+
+  unblockQuestion() {
+    this.element.nativeElement.querySelector(".question_choice").style.pointerEvents = "";
+  }
+
+  unblockLifelines() {
+    this.element.nativeElement.querySelector(".lifelines").style.pointerEvents = "";
   }
 
   highlightCorrectAnswer() {
@@ -281,11 +213,4 @@ export class GameComponent {
     this.audio.load();
     this.audio.play(); 
   }
-}
-
-interface QuestionAnswers {
-  question: string;
-  answers: string[];
-  correct: number;
-  fifty: number[];
 }

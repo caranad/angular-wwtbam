@@ -5,6 +5,7 @@
     padding: 10px;
     color: white;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 :host:hover {

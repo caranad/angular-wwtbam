@@ -1,0 +1,92 @@
+[
+    {
+        "question": "What film involves the lifelines 'Ask the Audience', '50:50' and 'Phone a Friend'?",
+        "answers": ["The Dark Knight", "Superman Returns", "Slumdog Millionaire", "Regis and the Temple of Cash"],
+        "correct": 2,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "The Big Apple is the nickname for which U.S city?",
+        "answers": ["San Francisco", "New York", "Indianapolis", "Miami"],
+        "correct": 1,
+        "fifty": [2, 3]
+    },
+    {
+        "question": "As of 2019, the country of England is ruled by which type of leader?",
+        "answers": ["Chief", "President", "Minister", "Queen"],
+        "correct": 3,
+        "fifty": [1, 2]
+    },
+    {
+        "question": "Until its demise in early 2011, what television channel was notorious for releasing horrible English dubs of anime?",
+        "answers": ["4Kids", "5Kids", "6Kids", "7Kids"],
+        "correct": 0,
+        "fifty": [1, 2]
+    },
+    {
+        "question": "In old English times, what branch of Christianity did a Papist belong to?",
+        "answers": ["Presbyterian", "Methodist", "Roman Catholic", "Eastern Orthodox"],
+        "correct": 2,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "What NBA team became the subject of memes and mockery following a disastrous NBA Finals effort in 2016?",
+        "answers": ["Cleveland Cavaliers", "Golden State Warriors", "Oklahoma City Thunder", "Toronto Raptors"],
+        "correct": 1,
+        "fifty": [0, 3]
+    },
+    {
+        "question": "Albufeira is a resort located on which of the following islands?",
+        "answers": ["French Riviera", "Algarve", "Costa Blanca", "Maldives"],
+        "correct": 1,
+        "fifty": [2, 3]
+    },
+    {
+        "question": "If you're watching a show whose English name is 'Coronation Street', which country would you most likely be in?",
+        "answers": ["United Kingdom", "Belgium", "Canada", "Mexico"],
+        "correct": 0,
+        "fifty": [1, 3]
+    },
+    {
+        "question": "Where was the 2015 Cricket World Cup held in?",
+        "answers": ["India, Pakistan", "Japan, South Korea", "Australia, New Zealand", "Indonesia, Singapore"],
+        "correct": 2,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "The novel 'Cry, the Beloved Country' is set in which country?",
+        "answers": ["Russia", "Mexico", "Argentina", "South Africa"],
+        "correct": 3,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "How many games did the 1972 Summit Series, an exhibition ice hockey series between Canada and the Soviet Union, last?",
+        "answers": ["7", "8", "9", "10"],
+        "correct": 1,
+        "fifty": [2, 3]
+    },
+    {
+        "question": "Which of these Popes reigned from the period of 1878 to 1903?",
+        "answers": ["Pius XI", "Leo XIII", "Benedict XV", "Gregory XVI"],
+        "correct": 1,
+        "fifty": [2, 3]
+    },
+    {
+        "question": "In the Bible, who among Jacob's sons is the youngest?",
+        "answers": ["Reuben", "Gad", "Judah", "Benjamin"],
+        "correct": 3,
+        "fifty": [1, 2]
+    },
+    {
+        "question": "In the 1890s, heroin was introduced commercially to the U.S as a remedy to what ailment?",
+        "answers": ["Stiff joints", "High fever", "Stuffy head", "Persistent cough"],
+        "correct": 3,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "A number one followed by 100 zeros is commonly known by what name?",
+        "answers": ["Googol", "Megatron", "Gigabit", "Nanomole"],
+        "correct": 0,
+        "fifty": [1, 2]
+    }
+]

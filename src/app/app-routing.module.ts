@@ -7,7 +7,7 @@ import { PrizeComponent } from './prize/prize.component';
 
 const routes: Routes = [
 {
-  path: 'game',
+  path: 'game/:id',
   component: GameComponent
 },
 {

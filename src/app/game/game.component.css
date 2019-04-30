@@ -5,6 +5,8 @@
 .choice_row {
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -27,10 +29,11 @@
 
 .wwtbam_cash_won {
     display: none;
-    color: yellow;
+    color: orange;
     background-color:navy;
     padding: 10px;
     text-align: center;
     width: 90%;
     margin: 10 auto;
+    border-radius: 50px;
 }
