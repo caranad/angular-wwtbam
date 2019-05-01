@@ -1,0 +1,10 @@
+.wwtbam_cash_won {
+    display: none;
+    color: orange;
+    background-image: linear-gradient(purple, navy);;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+    margin: 10 auto;
+    border-radius: 50px;
+}

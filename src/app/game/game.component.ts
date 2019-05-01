@@ -86,6 +86,7 @@ export class GameComponent {
 
   blockLifelines() {
     this.element.nativeElement.querySelector(".lifelines").style.pointerEvents = "none";
+    this.element.nativeElement.querySelector(".moneytree").style.pointerEvents = "none";
   }
 
   unblockQuestion() {
@@ -98,6 +99,7 @@ export class GameComponent {
 
   unblockLifelines() {
     this.element.nativeElement.querySelector(".lifelines").style.pointerEvents = "";
+    this.element.nativeElement.querySelector(".moneytree").style.pointerEvents = "";
   }
 
   highlightCorrectAnswer() {

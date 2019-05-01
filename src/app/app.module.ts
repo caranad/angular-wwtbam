@@ -14,6 +14,7 @@ import { PhonelifelineComponent } from './phonelifeline/phonelifeline.component'
 import { AudiencelifelineComponent } from './audiencelifeline/audiencelifeline.component';
 import { DdiplifelineComponent } from './ddiplifeline/ddiplifeline.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CashwonComponent } from './cashwon/cashwon.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     PhonelifelineComponent,
     AudiencelifelineComponent,
     DdiplifelineComponent,
+    CashwonComponent,
   ],
   imports: [
     BrowserModule,
