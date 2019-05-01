@@ -1,5 +1,6 @@
 <div class = "moneytree">
   <div class = "question_num" *ngFor = "let q of q_numbers" [ngClass] = "{'current': q.question == currentValue + 1}">
-    <span [ngClass] = "{'milestone': (q.question == 5 || q.question == 10 || q.question == 15)}">{{q.question}} {{q.value}}</span>
+    <span *ngIf = "q.question < 10" [ngClass] = "{'milestone': (q.question == 5)}">{{q.question}}&nbsp;&nbsp;&nbsp;{{q.value}}</span>
+    <span *ngIf = "q.question >= 10" [ngClass] = "{'milestone': (q.question == 10 || q.question == 15)}">{{q.question}}&nbsp;{{q.value}}</span>
   </div>
 </div>

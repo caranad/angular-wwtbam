@@ -10,6 +10,15 @@
     margin-bottom: 10px;
 }
 
+#walkaway {
+    color: white;
+    background-color: black;
+    border: 3px solid #1488e8;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
 .lifelines {
     flex: 1;
     text-align: center;
@@ -18,7 +27,7 @@
 .question_choice {
     width: 98%;
     position: absolute;
-    bottom: 0;
+    bottom: 20;
 }
 
 #thousand_milestone, #thirtytwo_milestone {
@@ -30,10 +39,19 @@
 .wwtbam_cash_won {
     display: none;
     color: orange;
-    background-color:navy;
+    background-image: linear-gradient(purple, navy);;
     padding: 10px;
     text-align: center;
     width: 90%;
     margin: 10 auto;
     border-radius: 50px;
+}
+
+.wwtbam_top {
+    display: flex;
+}
+
+.wwtbam_logo {
+    flex: 3;
+    margin: 0 auto;
 }

@@ -97,6 +97,8 @@ export class AnsoptionComponent implements OnInit {
             this.choice = " ";
             this.app.setDoubleDip(false);
             this.dd.playDoubleDipWrong();
+            this.app.unblockQuestion();
+            this.app.unblockLifelines();
             this.app.playBGM(this.app.getCurrentQuestion());
 
             this.getNativeElement().nativeElement.style[0] = "";
