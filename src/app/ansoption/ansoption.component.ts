@@ -42,19 +42,16 @@ export class AnsoptionComponent implements OnInit {
         this.numTaps = 2;
 
         this.getNativeElement().nativeElement.style.pointerEvents = "none";
-  
-        this.playLetsPlaySound(this.app.getCurrentQuestion());
-
-        setTimeout(function() {   
-          x.app.getNextQuestion();
-          x.app.unblockQuestion();
-          x.app.unblockLifelines();
-        }, 4000)
-
         this.getNativeElement().nativeElement.querySelector("b").style[0] = "";
         this.getNativeElement().nativeElement.querySelector("b").style.color = "";
         this.getNativeElement().nativeElement.style[0] = "";
-        this.getNativeElement().nativeElement.style.backgroundColor = "";          
+        this.getNativeElement().nativeElement.style.backgroundColor = ""; 
+
+        setTimeout(function(){
+          x.app.getNextQuestion();
+          x.app.unblockQuestion();
+          x.app.unblockLifelines(); 
+        }, 2000);
       }
       else if (this.numTaps == 2) {
         this.numTaps--;
@@ -140,11 +137,15 @@ export class AnsoptionComponent implements OnInit {
       this.audio.src = "../../assets/sound/final/32000f.wav"
     }
 
-    this.audio.load();
-    this.audio.play();
+    if (this.audio.src != "" || this.audio.src != undefined) {
+      this.audio.load();
+      this.audio.play();
+    }
   }
 
   playCorrectSound(question: number) {
+    var x = this;
+
     if (question < 4) {
       this.audio.src = "../../assets/sound/correct/100-500.wav"
     }
@@ -186,11 +187,15 @@ export class AnsoptionComponent implements OnInit {
 
     this.audio.load();
     this.audio.play();
+
+    this.audio.onended = function() {
+      x.playLetsPlaySound(x.app.getCurrentQuestion());
+    }
   }
 
   playLetsPlaySound(question: number) {
-    this.audio.loop = false;
-    
+    var x = this;
+
     if (question == 4 || question == 9) {
       this.audio.src = "../../assets/sound/letsplay/2000s.wav"
     }
@@ -210,8 +215,13 @@ export class AnsoptionComponent implements OnInit {
       this.audio.src = "";
     }
 
+    this.audio.loop = false;
     this.audio.load();
     this.audio.play();
+
+    this.audio.onended = function() {
+      x.audio.src = "";
+    }
   }
 
   playWrongSound(question: number) {

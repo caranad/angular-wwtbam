@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitleComponent implements OnInit {
 
+  public audio: any;
+
   constructor() {
+    var x = this;
+
     setTimeout(function() {
-      var audio = new Audio();
-      audio.src = "../../assets/sound/wwtbam_main.mp3";
-      audio.load();
-      audio.play();
+      x.audio = new Audio();
+      x.audio.src = "../../assets/sound/wwtbam_main.mp3";
+      x.audio.load();
+      x.audio.play();
     }, 2000);
    }
 
@@ -25,7 +29,13 @@ export class TitleComponent implements OnInit {
       alert("Please pick a number that's between 1 and 25.");
     }
     else {
-      window.location.href = "/game/" + num;
+      this.audio.src = "../../assets/sound/letsplay/2000s.wav";
+      this.audio.load();
+      this.audio.play();
+
+      this.audio.onended = function() {
+        window.location.href = "/game/" + num;
+      }
     }
   }
 }
