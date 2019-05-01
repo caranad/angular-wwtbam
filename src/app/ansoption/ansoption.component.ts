@@ -71,6 +71,7 @@ export class AnsoptionComponent implements OnInit {
         if (this.app.isDoubleDip()) {
           // Play double dip final answer sound
           this.dd.playDoubleDipSound();
+          this.app.pauseBGM();
         }
         else {
           if (this.app.getCurrentQuestion() > 4) {
@@ -88,7 +89,6 @@ export class AnsoptionComponent implements OnInit {
           this.app.showWinCash();
           this.getNativeElement().nativeElement.style.backgroundColor = "lime";
           this.getNativeElement().nativeElement.querySelector("b").style.color = "orange";
-
           this.app.setDoubleDip(false);
         }
         else {

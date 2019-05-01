@@ -4,7 +4,7 @@
         <app-fiftylifeline></app-fiftylifeline>
         <app-phonelifeline></app-phonelifeline>
         <app-audiencelifeline></app-audiencelifeline>
-        <app-ddiplifeline></app-ddiplifeline>
+        <app-ddiplifeline *ngIf = "this.progress > 4"></app-ddiplifeline>
         <br>
         <br>
         <button id = "walkaway" (click) = "walkAway()">WALK AWAY</button>
