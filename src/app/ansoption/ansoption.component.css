@@ -7,6 +7,7 @@
     cursor: pointer;
     border-radius: 25px;
     height: 20px;
+    z-index: 1;
 }
 
 :host:hover {
@@ -15,6 +16,7 @@
 
 .choice_a {
     display: none;
+    z-index: 0;
 }
 
 .choice_a b {
