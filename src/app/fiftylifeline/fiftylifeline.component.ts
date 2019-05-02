@@ -23,10 +23,7 @@ export class FiftylifelineComponent implements OnInit {
 
     // Get the fifty-fifty choices. Eliminate 
     var indexes = this.app.getFifty();
-    console.log(indexes);
-
     var answers = this.app.getAnswers();
-    console.log(answers);
 
     indexes.forEach(function(a) {
       answers[a] = " ";
