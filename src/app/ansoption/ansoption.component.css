@@ -6,10 +6,15 @@
     color: white;
     cursor: pointer;
     border-radius: 25px;
+    height: 20px;
 }
 
 :host:hover {
     background-color: gray;
+}
+
+.choice_a {
+    display: none;
 }
 
 .choice_a b {

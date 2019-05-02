@@ -52,6 +52,35 @@ export class GameComponent {
     this.answers = this.qa[this.progress].answers;
     this.correct = this.qa[this.progress].correct;
     this.fifty = this.qa[this.progress].fifty;
+
+    this.showAnswers();
+  }
+
+  hideAnswers() {
+    var answers = this.element.nativeElement.querySelectorAll("app-ans .choice_a");
+    for (var i = 0; i < answers.length; i++) {
+      answers[i].style.display = "none";
+    }
+  }
+
+  showAnswers() {
+    var answers = this.element.nativeElement.querySelectorAll("app-ans .choice_a");
+
+    setTimeout(function() {
+      answers[0].style.display = "block";
+    }, 3000);
+
+    setTimeout(function() {
+      answers[1].style.display = "block";
+    }, 4000);
+
+    setTimeout(function() {
+      answers[2].style.display = "block";
+    }, 5000);
+
+    setTimeout(function() {
+      answers[3].style.display = "block";
+    }, 6000);
   }
 
   setDoubleDip(toggle:boolean) {
@@ -116,11 +145,15 @@ export class GameComponent {
       if (this.getNumQuestionsAnswered() >= 5) {
         this.playBGM(this.getNumQuestionsAnswered());
       }
+
+      this.hideAnswers();
       
       this.question = this.qa[this.progress].question;
       this.answers = this.qa[this.progress].answers;
       this.correct = this.qa[this.progress].correct;
       this.fifty = this.qa[this.progress].fifty;
+
+      this.showAnswers();
     }
     else {
       if (this.getCurrentQuestion() == 15) {
