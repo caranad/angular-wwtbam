@@ -1,0 +1,92 @@
+[
+    {
+        "question": "Which of the following Windows games uses playing cards as a central part of its gameplay?",
+        "answers": ["Minesweeper", "Pinball", "Solitaire", "Console Wars: Revenge of the Macs"],
+        "correct": 2,
+        "fifty": [0, 3]
+    },
+    {
+        "question": "Initially released on the Nintendo Entertainment System in 1986 was the popular video game series 'The Legend Of...'?",
+        "answers": ["Zelda", "Mario", "Sonic", "Ness"],
+        "correct": 0,
+        "fifty": [2, 3]
+    },
+    {
+        "question": "In which of the following films does Jackie Chan portray police officer Kevin Chan?",
+        "answers": ["Shanghai Noon", "The Spy Next Door", "The Foreigner", "Police Story"],
+        "correct": 3,
+        "fifty": [0, 2]
+    },
+    {
+        "question": "Which anime series' opening song starts with the line, 'Smile, sweet, sister, sadistic, surprise, service'?",
+        "answers": ["Blend X", "Blend S", "Blend Y", "Blend Z"],
+        "correct": 1,
+        "fifty": [0, 3]
+    },
+    {
+        "question": "Translated from Japanese, the word 'nani?' is used to express what English equivalent question?",
+        "answers": ["Hello", "What", "Sorry", "Why"],
+        "correct": 1,
+        "fifty": [0, 3]
+    },
+    {
+        "question": "Which of these Evangelion units is associated with the color red?",
+        "answers": ["Unit 00", "Unit 01", "Unit 02", "Unit 03"],
+        "correct": 2,
+        "fifty": [0, 3]
+    },
+    {
+        "question": "On the anime series 'Cowboy Bebop', the dog Ein is the same breed as the one held by which head of state?",
+        "answers": ["George W. Bush", "Elizabeth II", "Adolf Hitler", "Juan Carlos I"],
+        "correct": 1,
+        "fifty": [0, 2]
+    },
+    {
+        "question": "Which of these Yu-Gi-Oh cards do not have an attack level of exactly 2300?",
+        "answers": ["Gaia The Fierce Knight", "Goblin Attack Force", "Ryu Ran", "Freed The Matchless General"],
+        "correct": 2,
+        "fifty": [0, 3]
+    },
+    {
+        "question": "What fate does Tolle Koenig from 'Mobile Suit Gundam SEED' receive?",
+        "answers": ["Promoted to captain", "Becomes a traitor", "Marries his girlfriend", "Killed in action"],
+        "correct": 3,
+        "fifty": [1, 2]
+    },
+    {
+        "question": "Inuyasha' first episode aired in 2000 in Japan. How many years after that did it take to be aired in English countries?",
+        "answers": ["1", "2", "3", "4"],
+        "correct": 1,
+        "fifty": [2, 3]
+    },
+    {
+        "question": "Astro Boy, the titular character of the 1950s series of the same name, was created to replace Dr. Tenma's son, who had what name?",
+        "answers": ["Francis", "Paul", "Toby", "Leo"],
+        "correct": 2,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "Love Live's idol group shares its name with the symbol to measure what mathematical quantity?",
+        "answers": ["Variance", "Summation", "Standard deviation", "Mean"],
+        "correct": 3,
+        "fifty": [2, 3]
+    },
+    {
+        "question": "What type of garment is named after British prime minister Anthony Eden?",
+        "answers": ["Overcoat", "Tie", "Hat", "Shoe"],
+        "correct": 2,
+        "fifty": [1, 3]
+    },
+    {
+        "question": "What was the first name of Pope John Paul II, who reigned as head of the Roman Catholic Church from 1978 to 2005?",
+        "answers": ["Stanislaus", "Eugeniusz", "Karol", "Jozef"],
+        "correct": 2,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "Which composer wrote the music for the coronation of French monarch Charles X at Reims, in 1820?",
+        "answers": ["Ludwig Van Beethoven", "Luigi Cherubini", "Hector Berlioz", "Christoph Gluck"],
+        "correct": 1,
+        "fifty": [2, 3]
+    }
+]

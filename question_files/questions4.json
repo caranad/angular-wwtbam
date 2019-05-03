@@ -1,0 +1,92 @@
+[
+    {
+        "question": "How many hours are there in a day?",
+        "answers": ["6", "12", "24", "Not enough"],
+        "correct": 2,
+        "fifty": [0, 3]
+    },
+    {
+        "question": "In the anime series 'Sonic X', how many Chaos Emeralds are there?",
+        "answers": ["5", "6", "7", "8"],
+        "correct": 2,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "Iconic Fate series character Saber is who?",
+        "answers": ["King Arthur", "King John", "King Richard", "King Henry"],
+        "correct": 0,
+        "fifty": [1, 3]
+    },
+    {
+        "question": "In which Japanese city do you find the district of Akihabara, home to a large selection of anime and manga merchandise?",
+        "answers": ["Osaka", "Kyoto", "Fukuoka", "Tokyo"],
+        "correct": 3,
+        "fifty": [1, 2]
+    },
+    {
+        "question": "Which of the following countries does not make an appearance on the anime series 'Hetalia'?",
+        "answers": ["Austria", "Hungary", "Poland", "Vatican City"],
+        "correct": 3,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "What anime series involves the 'Endless Eight' saga, which involves an endless time loop that lasts eight episodes?",
+        "answers": ["Lucky Star", "School Days", "Ouran High School Host Club", "Haruhi Suzumiya"],
+        "correct": 3,
+        "fifty": [1, 2]
+    },
+    {
+        "question": "Who wears glasses in the anime series Nichijou?",
+        "answers": ["Mr. Sakamoto", "Mio", "Yuuko", "Mai"],
+        "correct": 3,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "By replacing the last letter of the drink with a specific vowel, which of these alcoholic drinks becomes the surname of a 'Jojo's Bizarre Adventure' character?",
+        "answers": ["Brandy", "Sake", "Tequila", "Vodka"],
+        "correct": 0,
+        "fifty": [0, 1]
+    },
+    {
+        "question": "How many live action versions of 'Assassination Classroom' are there?",
+        "answers": ["1", "2", "3", "4"],
+        "correct": 1,
+        "fifty": [0, 3]
+    },
+    {
+        "question": "On the 'Family Guy' episode 'Fighting Irish', which actor makes an appearance?",
+        "answers": ["Liam Neeson", "Kevin Costner", "Sean Connery", "Ralph Fiennes"],
+        "correct": 0,
+        "fifty": [2, 3]
+    },
+    {
+        "question": "What anime series' ending song is titled 'Kitto seishun ga kikoeru'?",
+        "answers": ["Boku No Hero Academia", "Puella Magi Madoka Magica", "Fate: Stay Night", "Love Live"],
+        "correct": 3,
+        "fifty": [0, 2]
+    },
+    {
+        "question": "Which of the following 1980s anime series was released first chronologically?",
+        "answers": ["Dragon Ball", "Ronin Warriors", "Super Dimension Fortress Macross", "Mobile Suit Zeta Gundam"],
+        "correct": 2,
+        "fifty": [1, 3]
+    },
+    {
+        "question": "Which Italian city is synonymous with the person known as Girolamo Savonarola, who effectively governed it during the late 15th century?",
+        "answers": ["Naples", "Florence", "Siena", "Milan"],
+        "correct": 1,
+        "fifty": [0, 2]
+    },
+    {
+        "question": "After nitrogen and oxygen, what is the third most abundant gas in the air?",
+        "answers": ["Xenon", "Argon", "Helium", "Neon"],
+        "correct": 1,
+        "fifty": [0, 2]
+    },
+    {
+        "question": "Voted as the #1 movie line by the American Films Institute in 2005, which film's last lines are the words 'Frankly my dear, I don't give a damn'?",
+        "answers": ["Casablanca", "Dr. Strangelove", "Gone With The Wind", "Citizen Kane"],
+        "correct": 2,
+        "fifty": [1, 3]
+    }
+]
