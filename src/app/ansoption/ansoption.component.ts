@@ -42,9 +42,7 @@ export class AnsoptionComponent implements OnInit {
         this.numTaps = 2;
 
         this.getNativeElement().nativeElement.style.pointerEvents = "none";
-        this.getNativeElement().nativeElement.querySelector("b").style[0] = "";
         this.getNativeElement().nativeElement.querySelector("b").style.color = "";
-        this.getNativeElement().nativeElement.style[0] = "";
         this.getNativeElement().nativeElement.style.backgroundColor = ""; 
 
         setTimeout(function(){
@@ -98,9 +96,7 @@ export class AnsoptionComponent implements OnInit {
             this.app.unblockLifelines();
             this.app.playBGM(this.app.getCurrentQuestion());
 
-            this.getNativeElement().nativeElement.style[0] = "";
             this.getNativeElement().nativeElement.style.backgroundColor = "";
-            this.getNativeElement().nativeElement.querySelector("b").style[0] = "";
             this.getNativeElement().nativeElement.querySelector("b").style.color = "";
           }
           else {

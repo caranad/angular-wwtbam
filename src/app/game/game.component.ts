@@ -138,6 +138,7 @@ export class GameComponent {
   }
 
   getNextQuestion() {
+    console.log("Crap");
     this.element.nativeElement.querySelector(".wwtbam_cash_won").style.display = "none";
     this.progress = this.progress + 1;
 
