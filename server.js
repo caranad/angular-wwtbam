@@ -1,15 +1,17 @@
-var express = require('express');
-var questions = require('./questions/qapi');
-var app = express();
+const express = require('express');
+const cors = require('cors');
+const questions = require('./questions/qapi');
+const app = express();
 
-var PATH = __dirname + '/dist/wwtbam';
+const options = {
+    origin:['http://localhost:4200'],
+    methods:['GET','POST', 'PUT', 'DELETE'],
+    credentials: true
+};
 
-app.use(express.static(PATH));
+app.use(cors(options));
+
 app.use('/questions', questions);
-
-app.get('*', function(req, res) {
-    res.sendFile(PATH + '/index.html');
-});
 
 app.listen(8000, function() {
     console.log("Starting WHO WANTS TO BE A MILLIONAIRE: ANIME AND MANGA * EDITION");

@@ -16,7 +16,7 @@ export class QuestionService {
 
   async getQuestions() {
     var param = window.location.pathname.split("/")[2];
-    const response = await this.http.get('/questions/' + param).toPromise();
+    const response = await this.http.get('http://localhost:8000/questions/' + param).toPromise();
     return response;
   }
 }
