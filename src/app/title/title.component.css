@@ -4,6 +4,7 @@
 
 .wwtbam_image img {
     width: 400px;
+    opacity: 0;
 }
 
 .wwtbam_title_container {

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { TweenLite } from 'gsap';
 
 @Component({
   selector: 'app-title',
@@ -6,22 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./title.component.css']
 })
 export class TitleComponent implements OnInit {
+  @ViewChild('titleImage') titleImg: ElementRef;
 
   public audio: any;
 
-  constructor() {
-    var x = this;
-
-    setTimeout(function() {
-      x.audio = new Audio();
-      x.audio.src = "../../assets/sound/wwtbam_main.mp3";
-      x.audio.load();
-      x.audio.play();
-    }, 2000);
-   }
+  constructor(private el: ElementRef) {}
 
   ngOnInit() {
+    setTimeout(() => {
+      this.audio = new Audio();
+      this.audio.src = "../../assets/sound/wwtbam_main.mp3";
+      this.audio.load();
+      this.audio.play();
 
+      TweenLite.to(
+        this.titleImg.nativeElement, 5, { opacity: 1 }
+      );
+    }, 2000);
   }
 
   goToGame(num: number) {

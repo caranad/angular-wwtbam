@@ -14,15 +14,13 @@ export class PrizeComponent implements OnInit {
   public audio: any;
 
   constructor() { 
-    var x = this;
-
     this.points = localStorage.getItem("prize");
     this.audio = new Audio();  
     this.audio.src = "../../assets/sound/endgame.mp3"; 
     this.audio.load();
 
-    setTimeout(function() {
-      x.audio.play(); 
+    setTimeout(() => {
+      this.audio.play(); 
     }, 4000);
   }
 

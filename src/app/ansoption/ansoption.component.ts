@@ -35,8 +35,6 @@ export class AnsoptionComponent implements OnInit {
   }
 
   checkAnswer() {
-    var x = this;
-
     if (this.choice != " ") {
       if (this.numTaps == 0) {
         this.numTaps = 2;
@@ -45,10 +43,10 @@ export class AnsoptionComponent implements OnInit {
         this.getNativeElement().nativeElement.querySelector("b").style.color = "";
         this.getNativeElement().nativeElement.style.backgroundColor = ""; 
 
-        setTimeout(function(){
-          x.app.getNextQuestion();
-          x.app.unblockQuestion();
-          x.app.unblockLifelines(); 
+        setTimeout(() => {
+          this.app.getNextQuestion();
+          this.app.unblockQuestion();
+          this.app.unblockLifelines(); 
         }, 2000);
       }
       else if (this.numTaps == 2) {
@@ -107,7 +105,7 @@ export class AnsoptionComponent implements OnInit {
             this.app.pauseBGM();
             this.playWrongSound(this.app.getCurrentQuestion());
           
-            setTimeout(function() {
+            setTimeout(() => {
               window.location.href = "/prize";
             }, 10000);
           }

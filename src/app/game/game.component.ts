@@ -66,19 +66,19 @@ export class GameComponent {
   showAnswers() {
     var answers = this.element.nativeElement.querySelectorAll("app-ans .choice_a");
 
-    setTimeout(function() {
+    setTimeout(() => {
       answers[0].style.display = "block";
     }, 3000);
 
-    setTimeout(function() {
+    setTimeout(() => {
       answers[1].style.display = "block";
     }, 4000);
 
-    setTimeout(function() {
+    setTimeout(() => {
       answers[2].style.display = "block";
     }, 5000);
 
-    setTimeout(function() {
+    setTimeout(() => {
       answers[3].style.display = "block";
     }, 6000);
   }
@@ -164,7 +164,6 @@ export class GameComponent {
   }
 
   showWinCash() {
-    var x = this;
     this.winCash = this.mtree.getMoneyTree()[14 - this.progress].value;
     this.element.nativeElement.querySelector(".wwtbam_cash_won").style.display = "block";
   }
@@ -188,8 +187,6 @@ export class GameComponent {
   }
 
   walkAway() {
-    var x = this;
-
     this.pauseBGM();
 
     if (this.progress == 0) {
@@ -199,10 +196,10 @@ export class GameComponent {
       localStorage.setItem("prize", this.mtree.getMoneyTree()[15 - this.progress].value);
     }
 
-    setTimeout(function() {
-      x.highlightCorrectAnswer();
+    setTimeout(() => {
+      this.highlightCorrectAnswer();
 
-      setTimeout(function() {
+      setTimeout(() => {
         window.location.href = "/prize";
       }, 4000);
     }, 4000);
