@@ -11,7 +11,7 @@ export class TitleComponent implements OnInit {
 
   public audio: any;
 
-  constructor(private el: ElementRef) {}
+  constructor() {}
 
   ngOnInit() {
     setTimeout(() => {
