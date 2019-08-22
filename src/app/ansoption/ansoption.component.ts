@@ -182,7 +182,6 @@ export class AnsoptionComponent implements OnInit {
     this.audio.play();
 
     this.audio.onended = () => {
-      console.log(this.app.getCurrentQuestion())
       this.app.updateLighting(this.app.getCurrentQuestion());
       this.playLetsPlaySound(this.app.getCurrentQuestion());
     }
