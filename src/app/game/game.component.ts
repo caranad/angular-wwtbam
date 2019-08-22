@@ -3,7 +3,7 @@ import { MoneytreeComponent } from '../moneytree/moneytree.component';
 import { QuestionService } from '../services/question.service';
 import { Router } from '@angular/router';
 
-import { TweenLite } from 'gsap';
+import { TweenLite, TimelineMax } from 'gsap';
 
 @Component({
   selector: 'app-game',
@@ -261,14 +261,30 @@ export class GameComponent {
     this.audio.play(); 
   }
 
+  celebratoryLighting() {
+    var timeline = new TimelineMax();
+    var overlay = this.overlay.nativeElement;
+
+    timeline.to(overlay, 3, { backgroundColor: "red" });
+    timeline.to(overlay, 3, { backgroundColor: "blue" });
+    timeline.to(overlay, 3, { backgroundColor: "purple" });
+    timeline.to(overlay, 3, { backgroundColor: "yellow" });
+    timeline.to(overlay, 3, { backgroundColor: "orange" });
+    timeline.to(overlay, 3, { backgroundColor: "green" });
+    timeline.to(overlay, 3, { backgroundColor: "black" });
+    timeline.to(overlay, 3, { opacity: 0.2 });
+
+    timeline.play();
+  }
+
   updateLighting(question: number) {
     var overlay = this.overlay.nativeElement;
 
     if (question >= 0 && question <= 3) {
-      TweenLite.to(overlay, 5, { opacity: 0 });
+      TweenLite.to(overlay, 5, { opacity: 0.2 });
     }
-    else if (question >= 4 && question <= 9) {
-      TweenLite.to(overlay, 5, { opacity: 0.4 });
+    else if (question >= 4 && question <= 8) {
+      TweenLite.to(overlay, 5, { opacity: 0.5 });
     }
     else {
       TweenLite.to(overlay, 5, { opacity: 0.8 });

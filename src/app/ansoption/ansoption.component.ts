@@ -176,14 +176,17 @@ export class AnsoptionComponent implements OnInit {
     }
     else if (question == 14) {
       this.audio.src = "../../assets/sound/correct/1000000.mp3"
+      this.app.celebratoryLighting();
     }
 
     this.audio.load();
     this.audio.play();
 
     this.audio.onended = () => {
-      this.app.updateLighting(this.app.getCurrentQuestion());
-      this.playLetsPlaySound(this.app.getCurrentQuestion());
+      if (this.app.getCurrentQuestion() < 15) {
+        this.app.updateLighting(this.app.getCurrentQuestion());
+        this.playLetsPlaySound(this.app.getCurrentQuestion());
+      }
     }
   }
 
