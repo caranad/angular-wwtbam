@@ -2,6 +2,22 @@
     width: 100%;
 }
 
+.overlay {
+    background-color: black;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.wwtbam_stats {
+    z-index: 1;
+    position: relative;
+}
+
 .choice_row {
     width: 100%;
     display: flex;

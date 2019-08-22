@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { TweenLite } from 'gsap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-title',
@@ -11,7 +12,7 @@ export class TitleComponent implements OnInit {
 
   public audio: any;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -35,8 +36,8 @@ export class TitleComponent implements OnInit {
       this.audio.load();
       this.audio.play();
 
-      this.audio.onended = function() {
-        window.location.href = "/game/" + num;
+      this.audio.onended = () => {
+        this.router.navigate(["/game/", num]);
       }
     }
   }

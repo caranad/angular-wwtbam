@@ -16,8 +16,6 @@ export class AudiencelifelineComponent implements OnInit {
   }
 
   executeLifeline() {
-    var x = this;
-
     this.app.pauseBGM();
     this.element.nativeElement.style.display = "none";
 
@@ -26,9 +24,9 @@ export class AudiencelifelineComponent implements OnInit {
     audio.load();
     audio.play();
 
-    audio.onended = function() {
+    audio.onended = () => {
       audio.loop = true;
-      x.app.playBGM(x.app.getCurrentQuestion());
+      this.app.playBGM(this.app.getCurrentQuestion());
     }
   }
 

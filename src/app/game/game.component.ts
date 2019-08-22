@@ -1,6 +1,9 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MoneytreeComponent } from '../moneytree/moneytree.component';
 import { QuestionService } from '../services/question.service';
+import { Router } from '@angular/router';
+
+import { TweenLite } from 'gsap';
 
 @Component({
   selector: 'app-game',
@@ -26,7 +29,9 @@ export class GameComponent {
 
   public qa: any;
 
-  constructor(private el: ElementRef, private mtree: MoneytreeComponent, private qq: QuestionService) {
+  @ViewChild('overlay') overlay: ElementRef;
+
+  constructor(private el: ElementRef, private router: Router, private mtree: MoneytreeComponent, private qq: QuestionService) {
     this.letters = ["A", "B", "C", "D"];
     this.doubledip = false;
     
@@ -158,7 +163,7 @@ export class GameComponent {
     else {
       if (this.getCurrentQuestion() == 15) {
         localStorage.setItem("prize", "MILLIONAIRE");
-        window.location.href = "/prize";
+        this.router.navigate(["/prize"]);
       }
     }
   }
@@ -200,7 +205,7 @@ export class GameComponent {
       this.highlightCorrectAnswer();
 
       setTimeout(() => {
-        window.location.href = "/prize";
+        this.router.navigate(["/prize"]);
       }, 4000);
     }, 4000);
   }
@@ -254,5 +259,19 @@ export class GameComponent {
     this.audio.loop = true;
     this.audio.load();
     this.audio.play(); 
+  }
+
+  updateLighting(question: number) {
+    var overlay = this.overlay.nativeElement;
+
+    if (question >= 0 && question <= 3) {
+      TweenLite.to(overlay, 5, { opacity: 0 });
+    }
+    else if (question >= 4 && question <= 9) {
+      TweenLite.to(overlay, 5, { opacity: 0.4 });
+    }
+    else {
+      TweenLite.to(overlay, 5, { opacity: 0.8 });
+    }
   }
 }

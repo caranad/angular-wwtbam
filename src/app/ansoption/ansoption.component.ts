@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { GameComponent } from '../game/game.component';
 import { DdiplifelineComponent } from '../ddiplifeline/ddiplifeline.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ans',
@@ -17,7 +18,7 @@ export class AnsoptionComponent implements OnInit {
   public audio: any;
   public numTaps: number;
 
-  constructor(private app: GameComponent, private el: ElementRef, private dd: DdiplifelineComponent) { 
+  constructor(private app: GameComponent, private router: Router, private el: ElementRef, private dd: DdiplifelineComponent) { 
     this.element = el;
     this.audio = new Audio();
     this.numTaps = 2;
@@ -106,7 +107,7 @@ export class AnsoptionComponent implements OnInit {
             this.playWrongSound(this.app.getCurrentQuestion());
           
             setTimeout(() => {
-              window.location.href = "/prize";
+              this.router.navigate(["/prize"]);
             }, 10000);
           }
         }
@@ -138,8 +139,6 @@ export class AnsoptionComponent implements OnInit {
   }
 
   playCorrectSound(question: number) {
-    var x = this;
-
     if (question < 4) {
       this.audio.src = "../../assets/sound/correct/100-500.wav"
     }
@@ -182,14 +181,14 @@ export class AnsoptionComponent implements OnInit {
     this.audio.load();
     this.audio.play();
 
-    this.audio.onended = function() {
-      x.playLetsPlaySound(x.app.getCurrentQuestion());
+    this.audio.onended = () => {
+      console.log(this.app.getCurrentQuestion())
+      this.app.updateLighting(this.app.getCurrentQuestion());
+      this.playLetsPlaySound(this.app.getCurrentQuestion());
     }
   }
 
   playLetsPlaySound(question: number) {
-    var x = this;
-
     if (question == 4 || question == 9) {
       this.audio.src = "../../assets/sound/letsplay/2000s.wav"
     }
@@ -213,8 +212,8 @@ export class AnsoptionComponent implements OnInit {
     this.audio.load();
     this.audio.play();
 
-    this.audio.onended = function() {
-      x.audio.src = "";
+    this.audio.onended = () => {
+      this.audio.src = "";
     }
   }
 
